@@ -12,15 +12,19 @@ var grid = [
 ];
 
 var rover = {
-    direction: "N"
+    direction: "W"
 };
 
 function turnLeft(rover){
 switch(rover.direction){
     case "N":
-        rover.direction = "E"
-    console.log(rover);
+        rover.direction = "W"
+        console.log(rover);
     break;
+    case "W":
+        rover.direction = "S"
+        console.log(rover);
+        break;
     }
 }
 turnLeft(rover)
