@@ -1,3 +1,5 @@
+var prompt = require('prompt');
+
 var grid = [
     [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "],
     [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "],
@@ -17,20 +19,20 @@ var rover = {
     y: 0
 };
 
-function turnLeft(rover){
-    switch(rover.direction){
+function turnLeft(rover) {
+    switch (rover.direction) {
         case "N":
             rover.direction = "W"
             console.log(rover);
-        break;
+            break;
         case "W":
             rover.direction = "S"
             console.log(rover);
             break;
-            case "S":
+        case "S":
             rover.direction = "E"
             console.log(rover);
-        break;
+            break;
         case "E":
             rover.direction = "N"
             console.log(rover);
@@ -41,20 +43,20 @@ function turnLeft(rover){
 };
 turnLeft(rover);
 
-function turnRight(rover){
-    switch(rover.direction){
+function turnRight(rover) {
+    switch (rover.direction) {
         case "N":
             rover.direction = "E"
             console.log(rover);
-        break;
+            break;
         case "E":
             rover.direction = "S"
             console.log(rover);
             break;
-            case "S":
+        case "S":
             rover.direction = "W"
             console.log(rover);
-        break;
+            break;
         case "W":
             rover.direction = "N"
             console.log(rover);
