@@ -1,5 +1,3 @@
-var prompt = require('prompt');
-
 var grid = [
     [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "],
     [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "],
@@ -66,3 +64,14 @@ function turnRight(rover) {
     }
 };
 turnRight(rover);
+
+function moveForward(rover) {
+    switch (rover.direction) {
+        case "E":
+            rover.x = rover.x + 1;
+            console.log(rover);
+            break;
+    }
+
+}
+moveForward(rover);
