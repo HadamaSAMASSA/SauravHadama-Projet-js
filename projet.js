@@ -12,7 +12,9 @@ var grid = [
 ];
 
 var rover = {
-    direction: "E"
+    direction: "E",
+    x: 0,
+    y: 0
 };
 
 function turnLeft(rover){
