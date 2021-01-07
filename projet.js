@@ -43,8 +43,8 @@ function turnLeft(rover) {
             console.log("error");
     }
 };
-console.log("turnLeft");
-turnLeft(rover);
+/*console.log("turnLeft");
+turnLeft(rover);*/
 
 function turnRight(rover) {
     switch (rover.direction) {
@@ -68,15 +68,15 @@ function turnRight(rover) {
             console.log("error");
     }
 };
-console.log("turnRight:");
-turnRight(rover);
+/*console.log("turnRight:");
+turnRight(rover);*/
 
 //4) Faisons avancer le rover : moveForward
 
 function moveForward(rover) {
     switch (rover.direction) {
         case "N":
-            rover.y = rover.y + 1;
+            rover.y = rover.y - 1;
             console.log(rover);
             break;
         case "E":
@@ -84,7 +84,7 @@ function moveForward(rover) {
             console.log(rover);
             break;
         case "S":
-            rover.y = rover.y - 1;
+            rover.y = rover.y + 1;
             console.log(rover);
             break;
         case "W":
@@ -93,17 +93,17 @@ function moveForward(rover) {
             break;
     }
 }
-console.log("moveForward:");
-moveForward(rover);
+/*console.log("moveForward:");
+moveForward(rover);*/
 
 //5) Créons un outil de commande : pilotRover
 function pilotRover(string) {
     for (var i = 0; i < string.length; i++) {
         if (string[i] === "L" || string[i] === "l") {
             console.log(turnLeft(rover));
-        } else if (sting[i] === "R" || string[i] === "r") {
+        } else if (string[i] === "R" || string[i] === "r") {
             console.log(turnRight(rover));
-        } else if (sting[i] === "F" || string[i] === "f") {
+        } else if (string[i] === "F" || string[i] === "f") {
             console.log(moveForward(rover));
         } else {
             console.log("error");
@@ -113,4 +113,4 @@ function pilotRover(string) {
 
 }
 console.log("pilotRover:")
-pilotRover("f");
+pilotRover("lf");
