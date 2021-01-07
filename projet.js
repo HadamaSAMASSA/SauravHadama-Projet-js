@@ -14,7 +14,7 @@ var grid = [
 
 
 var rover = {
-    direction: "S",
+    direction: "W",
     x: 0,
     y: 0,
 }; //3) Le déplacement : x et y.
