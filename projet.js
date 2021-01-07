@@ -43,6 +43,7 @@ function turnLeft(rover) {
             console.log("error");
     }
 };
+console.log("turnLeft");
 turnLeft(rover);
 
 function turnRight(rover) {
@@ -67,18 +68,20 @@ function turnRight(rover) {
             console.log("error");
     }
 };
+console.log("turnRight:");
 turnRight(rover);
 
 //4) Faisons avancer le rover : moveForward
 
 function moveForward(rover) {
     switch (rover.direction) {
-        case "E":
+        case "N":
             rover.x = rover.x + 1;
             console.log(rover);
             break;
     }
 }
+console.log("moveForward:");
 moveForward(rover);
 
 //5) Créons un outil de commande : pilotRover
