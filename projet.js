@@ -14,7 +14,7 @@ var grid = [
 
 
 var rover = {
-    direction: "N",
+    direction: "S",
     x: 0,
     y: 0,
     travelLog: []
@@ -43,9 +43,12 @@ function turnLeft(rover) {
         default:
             console.log("error");
     }
+    rover.travelLog.push(rover.direction);
+    console.log(rover);
 };
-/*console.log("turnLeft");
-turnLeft(rover);*/
+console.log("turnLeft");
+turnLeft(rover);
+turnLeft(rover);
 
 function turnRight(rover) {
     switch (rover.direction) {
@@ -68,9 +71,12 @@ function turnRight(rover) {
         default:
             console.log("error");
     }
+    rover.travelLog.push(rover.direction);
+    console.log(rover);
 };
-/*console.log("turnRight:");
-turnRight(rover);*/
+console.log("turnRight:");
+turnRight(rover);
+turnRight(rover);
 
 //4) Faisons avancer le rover : moveForward
 
@@ -115,7 +121,7 @@ function pilotRover(string) {
     }
 
 }
-console.log("pilotRover:")
-pilotRover("lf");
+/*console.log("pilotRover:")
+pilotRover("lf");*/
 
 //6) L'historique :
