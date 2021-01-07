@@ -97,3 +97,15 @@ console.log("moveForward:");
 moveForward(rover);
 
 //5) Créons un outil de commande : pilotRover
+function pilotRover(string) {
+    for (var i = 0; i < string.length; i++) {
+        if (string[i] === "l" || "l") {
+            console.log(turnLeft(rover));
+
+        }
+
+    }
+
+}
+console.log("pilotRover:")
+pilotRover("L");
