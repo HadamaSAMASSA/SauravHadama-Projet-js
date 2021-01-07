@@ -14,7 +14,7 @@ var grid = [
 
 
 var rover = {
-    direction: "E",
+    direction: "S",
     x: 0,
     y: 0,
 }; //3) Le déplacement : x et y.
@@ -76,7 +76,19 @@ turnRight(rover);
 function moveForward(rover) {
     switch (rover.direction) {
         case "N":
+            rover.y = rover.y + 1;
+            console.log(rover);
+            break;
+        case "E":
             rover.x = rover.x + 1;
+            console.log(rover);
+            break;
+        case "S":
+            rover.y = rover.y - 1;
+            console.log(rover);
+            break;
+        case "W":
+            rover.x = rover.x - 1;
             console.log(rover);
             break;
     }
