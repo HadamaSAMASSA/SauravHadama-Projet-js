@@ -17,6 +17,7 @@ var rover = {
     direction: "N",
     x: 0,
     y: 0,
+    travelLog: []
 }; //3) Le déplacement : x et y.
 
 //2) Ajoutons quelques fonctions : turnLeft et turnRight
@@ -91,6 +92,8 @@ function moveForward(rover) {
             rover.x = rover.x - 1;
             console.log(rover);
             break;
+        default:
+            console.log("error");
     }
 }
 /*console.log("moveForward:");
@@ -114,3 +117,5 @@ function pilotRover(string) {
 }
 console.log("pilotRover:")
 pilotRover("lf");
+
+//6) L'historique :
