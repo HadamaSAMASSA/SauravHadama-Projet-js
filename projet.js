@@ -14,7 +14,7 @@ var grid = [
 
 
 var rover = {
-    direction: "W",
+    direction: "N",
     x: 0,
     y: 0,
 }; //3) Le déplacement : x et y.
@@ -101,11 +101,16 @@ function pilotRover(string) {
     for (var i = 0; i < string.length; i++) {
         if (string[i] === "L" || "l") {
             console.log(turnLeft(rover));
-
+        }else if (sting[i] === "R" || "r"){
+            console.log(turnRight(rover));
+        }else if (sting[i] === "F" || "f"){
+            console.log(moveForward(rover));
+        }else {
+            console.log("error");
         }
 
     }
 
 }
 console.log("pilotRover:")
-pilotRover("L");
+pilotRover("f");
