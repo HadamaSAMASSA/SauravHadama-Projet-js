@@ -18,11 +18,11 @@ var rover = {
     x: 0,
     y: 0,
     travelLog: []
-}; //3) Le déplacement : x et y.
+};
 
 //2) Ajoutons quelques fonctions : turnLeft et turnRight
 
-function turnLeft(rover) {
+function turnLeft() {
     switch (rover.direction) {
         case "N":
             rover.direction = "W"
@@ -36,14 +36,11 @@ function turnLeft(rover) {
         case "E":
             rover.direction = "N"
             break;
-
     }
-    rover.travelLog.push(rover.direction);
+    console.log(rover.direction);
 };
-/*console.log("turnLeft");
-turnLeft(rover);*/
 
-function turnRight(rover) {
+function turnRight() {
     switch (rover.direction) {
         case "N":
             rover.direction = "E"
@@ -58,49 +55,37 @@ function turnRight(rover) {
             rover.direction = "N"
             break;
     }
-    rover.travelLog.push(rover.direction);
+    console.log(rover.direction);
 };
-/*console.log("turnRight:");
-turnRight(rover);*/
 //4) Faisons avancer le rover : moveForward
 
-function moveForward(rover) {
+function moveForward() {
     switch (rover.direction) {
         case "N":
-            rover.y = rover.y - 1;
+            rover.y--;
             break;
         case "E":
-            rover.x = rover.x + 1;
+            rover.x++;
             break;
         case "S":
-            rover.y = rover.y + 1;
+            rover.y++;
             break;
         case "W":
-            rover.x = rover.x - 1;
+            rover.x--;
             break;
-
     }
 }
-/*console.log("moveForward:");
-moveForward(rover);*/
 
 //5) Créons un outil de commande : pilotRover
 function pilotRover(string) {
     for (var i = 0; i < string.length; i++) {
-        if (string[i] === "L" || string[i] === "l") {
-            console.log(turnLeft(rover));
-        } else if (string[i] === "R" || string[i] === "r") {
-            console.log(turnRight(rover));
-        } else if (string[i] === "F" || string[i] === "f") {
-            console.log(moveForward(rover));
-        } else {
-            console.log("error");
+        switch (string[i]) {
+            case "L", "l":
+                turnLeft();
+            case "R", "r":
+                turnRight();
+            case "F", "f":
+                moveForward();
         }
-
     }
-
-}
-console.log("pilotRover:")
-pilotRover("lf");
-
-//6) L'historique :
+};
