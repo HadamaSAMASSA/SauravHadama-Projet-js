@@ -9,7 +9,7 @@ var grid = [
     [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "],
     [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "],
     [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "]
-];
+]; // var grid
 
 
 var rover = {
@@ -17,10 +17,10 @@ var rover = {
     x: 0,
     y: 0,
     travelLog: []
-};
+}; //var rover
 
 
-function turnLeft() {
+function turnLeft(rover) {
     switch (rover.direction) {
         case "N":
             rover.direction = "W"
@@ -36,9 +36,9 @@ function turnLeft() {
             break;
     };
     console.log(rover.direction);
-};
+}; //turnLeft()
 
-function turnRight() {
+function turnRight(rover) {
     switch (rover.direction) {
         case "N":
             rover.direction = "E"
@@ -54,9 +54,9 @@ function turnRight() {
             break;
     };
     console.log(rover.direction);
-};
+}; //turnRight()
 
-function moveForward() {
+function moveForward(rover) {
     switch (rover.direction) {
         case "N":
             rover.y--;
@@ -71,9 +71,9 @@ function moveForward() {
             rover.x--;
             break;
     };
-};
+}; //moveForward()
 
-function moveBackward() {
+function moveBackward(rover) {
     switch (rover.direction) {
         case "N":
             rover.y++;
@@ -88,28 +88,23 @@ function moveBackward() {
             rover.x++;
             break;
     };
-
-};
+}; //moveBackward()
 
 function pilotRover(string) {
     for (var i = 0; i < string.length; i++) {
         switch (string[i]) {
-            case "L":
             case "l":
-                turnLeft();
+                turnLeft(rover);
                 break;
-            case "R":
-            case "l":
-                turnRight();
+            case "r":
+                turnRight(rover);
                 break;
-            case "F":
             case "f":
-                moveForward();
+                moveForward(rover);
                 break;
-            case "B":
             case "b":
-                moveBackward();
+                moveBackward(rover);
                 break;
         };
     };
-};
+}; //pilotRover()
