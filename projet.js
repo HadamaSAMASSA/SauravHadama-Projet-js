@@ -1,4 +1,3 @@
-//1) Commençons par créer quelques variables : grid et rover
 var grid = [
     [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "],
     [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "],
@@ -20,7 +19,6 @@ var rover = {
     travelLog: []
 };
 
-//2) Ajoutons quelques fonctions : turnLeft et turnRight
 
 function turnLeft() {
     switch (rover.direction) {
@@ -36,7 +34,7 @@ function turnLeft() {
         case "E":
             rover.direction = "N"
             break;
-    }
+    };
     console.log(rover.direction);
 };
 
@@ -54,10 +52,9 @@ function turnRight() {
         case "W":
             rover.direction = "N"
             break;
-    }
+    };
     console.log(rover.direction);
 };
-//4) Faisons avancer le rover : moveForward
 
 function moveForward() {
     switch (rover.direction) {
@@ -73,19 +70,42 @@ function moveForward() {
         case "W":
             rover.x--;
             break;
-    }
-}
+    };
+};
 
-//5) Créons un outil de commande : pilotRover
+function moveBackward() {
+    switch (rover.direction) {
+        case "N":
+            rover.y++;
+            break;
+        case "E":
+            rover.x--;
+            break;
+        case "S":
+            rover.y--;
+            break;
+        case "W":
+            rover.x++;
+            break;
+    };
+
+};
+
 function pilotRover(string) {
     for (var i = 0; i < string.length; i++) {
         switch (string[i]) {
             case "L", "l":
                 turnLeft();
+                break;
             case "R", "r":
                 turnRight();
+                break;
             case "F", "f":
                 moveForward();
-        }
-    }
+                break;
+            case "B", "b":
+                moveBackward();
+                break;
+        };
+    };
 };
