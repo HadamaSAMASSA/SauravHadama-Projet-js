@@ -94,16 +94,20 @@ function moveBackward() {
 function pilotRover(string) {
     for (var i = 0; i < string.length; i++) {
         switch (string[i]) {
-            case "L", "l":
+            case "L":
+            case "l":
                 turnLeft();
                 break;
-            case "R", "r":
+            case "R":
+            case "l":
                 turnRight();
                 break;
-            case "F", "f":
+            case "F":
+            case "f":
                 moveForward();
                 break;
-            case "B", "b":
+            case "B":
+            case "b":
                 moveBackward();
                 break;
         };
