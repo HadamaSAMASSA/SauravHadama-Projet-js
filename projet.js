@@ -36,7 +36,7 @@ function turnLeft(rover) {
             break;
     };
     console.log(rover.direction);
-}; //turnLeft()
+}; //turnLeft function
 
 function turnRight(rover) {
     switch (rover.direction) {
@@ -54,7 +54,7 @@ function turnRight(rover) {
             break;
     };
     console.log(rover.direction);
-}; //turnRight()
+}; //turnRight function
 
 function moveForward(rover) {
     switch (rover.direction) {
@@ -71,7 +71,7 @@ function moveForward(rover) {
             rover.x--;
             break;
     };
-}; //moveForward()
+}; //moveForward function
 
 function moveBackward(rover) {
     switch (rover.direction) {
@@ -88,7 +88,7 @@ function moveBackward(rover) {
             rover.x++;
             break;
     };
-}; //moveBackward()
+}; //moveBackward function
 
 function pilotRover(string) {
     for (var i = 0; i < string.length; i++) {
@@ -107,4 +107,5 @@ function pilotRover(string) {
                 break;
         };
     };
-}; //pilotRover()
+}; //pilotRover function
+console.table(grid);
