@@ -13,7 +13,7 @@ var grid = [
 
 
 var rover = {
-    direction: "N",
+    direction: "S",
     x: 0,
     y: 0,
     travelLog: []
